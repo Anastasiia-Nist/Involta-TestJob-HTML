@@ -724,12 +724,12 @@ h3 {
   top: 22px;
   right: 22px;
   background-color: transparent;
-  background-image: url("../../img/like.svg");
+  background-image: url("../img/like.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
 .container__main .catalog__like-container .catalog__btn-like.active {
-  background-image: url("../../img/dislike.svg");
+  background-image: url("../img/dislike.svg");
 }
 .container__main .pagination {
   padding-top: 30px;
