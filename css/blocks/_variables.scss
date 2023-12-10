@@ -1,0 +1,40 @@
+$container: 1400px;
+
+$breakpoints: (
+  xll: $container,
+  xl: 1280px,
+  lg: 1100px,
+  md: 1024px,
+  sm: 768px,
+  xs: 500px,
+);
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint) - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin space-between() {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin column() {
+  display: flex;
+  flex-direction: column;
+}
+@mixin font-normal() {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
