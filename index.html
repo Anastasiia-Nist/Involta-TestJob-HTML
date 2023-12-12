@@ -7,7 +7,7 @@
     <title>Главная страница</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script defer src="js/script.js"></script>
+    <script defer src="js/index.js"></script>
   </head>
   <body>
     <div class="wrapper container">
@@ -24,52 +24,55 @@
           <nav class="header__navigation">
             <ul class="header__navigation-list">
               <li>
-                <a href="#">
+                <a href="#" class="header__link">
                   <img src="./img/icons-nav/living-room.svg" alt="Гостиная" />
-                  <h2 class="header__title">ГОСТИНАЯ</h2>
+                  ГОСТИНАЯ
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="header__link">
                   <img src="./img/icons-nav/kitchen.svg" alt="Кухня" />
-                  <h2 class="header__title">КУХНЯ</h2>
+                  КУХНЯ
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="header__link">
                   <img
                     src="./img/icons-nav/children's-room.svg"
                     alt="Детская"
                   />
-                  <h2 class="header__title">ДЕТСКАЯ</h2>
+                  ДЕТСКАЯ
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="header__link">
                   <img src="./img/icons-nav/bathroom.svg" alt="Ванная" />
-                  <h2 class="header__title">ВАННАЯ</h2>
+                  ВАННАЯ
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="header__link">
                   <img src="./img/icons-nav/bedroom.svg" alt="Спальня" />
-                  <h2 class="header__title">СПАЛЬНЯ</h2>
+                  СПАЛЬНЯ
                 </a>
               </li>
             </ul>
           </nav>
           <div class="header__additional">
-            <img
-              src="./img/icons-nav/additional-group.svg"
-              alt="Дополнительно"
-            />
+            <a href="#"
+              ><img src="./img/icons-menu/icons-search.svg" alt="Поиск"
+            /></a>
+            <a href="#"><img src="./img/like.svg" alt="Сохранённые" /></a>
+            <a href="#"
+              ><img src="./img/icons-menu/icons-menu.svg" alt="Настройки"
+            /></a>
           </div>
         </div>
 
         <!-- header mobile -->
 
         <div class="header__mobile">
-          <button class="header__button-burger">
+          <button type="button" class="header__button-burger">
             <span></span>
             <span></span>
             <span></span>
@@ -79,50 +82,55 @@
               <nav class="header__burger-navigation">
                 <ul class="header__burger-navigation-list">
                   <li>
-                    <a href="#">
+                    <a href="#" class="header__link">
                       <img
                         src="./img/icons-nav/living-room.svg"
                         alt="Гостиная"
                       />
-                      <h2 class="header__title">ГОСТИНАЯ</h2>
+                      ГОСТИНАЯ
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" class="header__link">
                       <img src="./img/icons-nav/kitchen.svg" alt="Кухня" />
-                      <h2 class="header__title">КУХНЯ</h2>
+                      КУХНЯ
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" class="header__link">
                       <img
                         src="./img/icons-nav/children's-room.svg"
                         alt="Детская"
                       />
-                      <h2 class="header__title">ДЕТСКАЯ</h2>
+                      ДЕТСКАЯ
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" class="header__link">
                       <img src="./img/icons-nav/bathroom.svg" alt="Ванная" />
-                      <h2 class="header__title">ВАННАЯ</h2>
+                      ВАННАЯ
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="#" class="header__link">
                       <img src="./img/icons-nav/bedroom.svg" alt="Спальня" />
-                      <h2 class="header__title">СПАЛЬНЯ</h2>
+                      СПАЛЬНЯ
                     </a>
                   </li>
                 </ul>
               </nav>
               <div class="header__additional">
-                <img
-                  src="./img/icons-nav/additional-group.svg"
-                  alt="Дополнительно"
-                />
+                <a href="#"
+                  ><img src="./img/icons-menu/icons-search.svg" alt="Поиск"
+                /></a>
+                <a href="#"><img src="./img/like.svg" alt="Сохранённые" /></a>
+                <a href="#"
+                  ><img src="./img/icons-menu/icons-menu.svg" alt="Настройки"
+                /></a>
               </div>
-              <button class="header__button-close button-close">X</button>
+              <button type="button" class="header__button-close button-close">
+                X
+              </button>
             </div>
           </div>
         </div>
@@ -146,7 +154,7 @@
                       value="calico"
                     />
                     <label class="checkbox-label" for="calico"
-                      >Бязь <span>3</span></label
+                      >Бязь&nbsp;<span>3</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -158,7 +166,7 @@
                       value="satin"
                     />
                     <label class="checkbox-label" for="satin"
-                      >Сатин <span>9</span></label
+                      >Сатин&nbsp;<span>9</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -170,7 +178,7 @@
                       value="poplin"
                     />
                     <label class="checkbox-label" for="poplin"
-                      >Поплин <span>1</span></label
+                      >Поплин&nbsp;<span>1</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -182,7 +190,7 @@
                       value="ranfors"
                     />
                     <label class="checkbox-label" for="ranfors"
-                      >Ранфорс<span>34</span></label
+                      >Ранфорс&nbsp;<span>34</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -194,7 +202,7 @@
                       value="percale"
                     />
                     <label class="checkbox-label" for="percale"
-                      >Перкаль <span>9</span></label
+                      >Перкаль&nbsp;<span>9</span></label
                     >
                   </li>
                 </ul>
@@ -211,7 +219,7 @@
                       value="single-bed"
                     />
                     <label class="checkbox-label" for="single-bed"
-                      >1,5 сп <span>3</span></label
+                      >1,5 сп&nbsp;<span>3</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -223,7 +231,7 @@
                       value="double-bed"
                     />
                     <label class="checkbox-label" for="double-bed"
-                      >2 сп <span>9</span></label
+                      >2 сп&nbsp;<span>9</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -235,7 +243,7 @@
                       value="euro-bed"
                     />
                     <label class="checkbox-label" for="euro-bed"
-                      >Евро <span>1</span></label
+                      >Евро&nbsp;<span>1</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -247,7 +255,7 @@
                       value="family-bed"
                     />
                     <label class="checkbox-label" for="family-bed"
-                      >Семейный <span>34</span></label
+                      >Семейный&nbsp;<span>34</span></label
                     >
                   </li>
                 </ul>
@@ -264,7 +272,7 @@
                       value="flowers"
                     />
                     <label class="checkbox-label" for="flowers"
-                      >Цветы <span>3</span></label
+                      >Цветы&nbsp;<span>3</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -276,7 +284,7 @@
                       value="geometry"
                     />
                     <label class="checkbox-label" for="geometry"
-                      >Геометрия <span>9</span></label
+                      >Геометрия&nbsp;<span>9</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -288,7 +296,7 @@
                       value="abstraction"
                     />
                     <label class="checkbox-label" for="abstraction"
-                      >Абстракция <span>1</span></label
+                      >Абстракция&nbsp;<span>1</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -300,7 +308,7 @@
                       value="animal"
                     />
                     <label class="checkbox-label" for="animal"
-                      >Animal <span>34</span></label
+                      >Animal&nbsp;<span>34</span></label
                     >
                   </li>
                 </ul>
@@ -317,7 +325,7 @@
                       value="set"
                     />
                     <label class="checkbox-label" for="set"
-                      >Комплект <span>3</span></label
+                      >Комплект&nbsp;<span>3</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -329,7 +337,7 @@
                       value="duvet-cover"
                     />
                     <label class="checkbox-label" for="duvet-cover"
-                      >Пододеяльник <span>9</span></label
+                      >Пододеяльник&nbsp;<span>9</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -341,7 +349,7 @@
                       value="sheet"
                     />
                     <label class="checkbox-label" for="sheet">
-                      Простыня <span>1</span></label
+                      Простыня&nbsp;<span>1</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -372,7 +380,7 @@
                     <label
                       class="checkbox-label checkbox-label_type_color"
                       for="white"
-                      >Белый <span>3</span></label
+                      >Белый&nbsp;<span>3</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -386,7 +394,7 @@
                     <label
                       class="checkbox-label checkbox-label_type_color"
                       for="peach"
-                      >Персиковый <span>9</span></label
+                      >Персиковый&nbsp;<span>9</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -400,7 +408,7 @@
                     <label
                       class="checkbox-label checkbox-label_type_color"
                       for="blue"
-                      >Голубой <span>1</span></label
+                      >Голубой&nbsp;<span>1</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -414,7 +422,7 @@
                     <label
                       class="checkbox-label checkbox-label_type_color"
                       for="yellow"
-                      >Желтый <span>34</span></label
+                      >Желтый&nbsp;<span>34</span></label
                     >
                   </li>
                   <li class="sidebar__list-item">
@@ -428,7 +436,7 @@
                     <label
                       class="checkbox-label checkbox-label_type_color"
                       for="gray"
-                      >Серый <span>9</span></label
+                      >Серый&nbsp;<span>9</span></label
                     >
                   </li>
                 </ul>
@@ -443,27 +451,19 @@
           <nav class="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
-                <a>
-                  <p>Главная</p>
-                </a>
+                <a href="#">Главная</a>
                 <span>/</span>
               </li>
               <li class="breadcrumbs__item">
-                <a>
-                  <p>Каталог</p>
-                </a>
+                <a href="#">Каталог</a>
                 <span>/</span>
               </li>
               <li class="breadcrumbs__item">
-                <a>
-                  <p>Спальня</p>
-                </a>
+                <a href="#">Спальня</a>
                 <span>/</span>
               </li>
               <li class="breadcrumbs__item">
-                <a>
-                  <p class="inactive">Постельное бельё</p>
-                </a>
+                <a href="#" class="inactive">Постельное бельё</a>
               </li>
             </ul>
           </nav>
@@ -483,12 +483,18 @@
               функции вызывает ряд тейлора. Сумма ряда концентрирует
               миксолидийский нонаккорд, что и требовалось доказать.
             </p>
-            <button class="sidebar-button">Фильтр товаров</button>
+            <button type="button" class="sidebar-button">Фильтр товаров</button>
             <div class="catalog__filter">
               <div>
-                <button class="catalog__filter-btn">По популярности</button>
-                <button class="catalog__filter-btn active">Материал</button>
-                <button class="catalog__filter-btn">Размер</button>
+                <button type="button" class="catalog__filter-btn">
+                  По популярности
+                </button>
+                <button type="button" class="catalog__filter-btn active">
+                  Материал
+                </button>
+                <button type="button" class="catalog__filter-btn">
+                  Размер
+                </button>
               </div>
               <span class="catalog__filter-span">1 120 товаров</span>
             </div>
@@ -501,23 +507,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image1.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -528,23 +543,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image1.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image2.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -555,23 +579,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image2.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -582,23 +615,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image3.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image4.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -609,23 +651,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image4.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image5.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -636,23 +687,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image5.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image6.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -663,23 +723,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image6.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image7.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -690,23 +759,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image7.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image8.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -717,23 +795,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image10.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -744,23 +831,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image2.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image9.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -771,23 +867,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image3.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image11.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -798,23 +903,32 @@
                 <li class="column col-4 md-col-6 xs-col-12">
                   <div class="catalog__item">
                     <div class="slider">
-                      <img
-                        src="./img/catalog/image4.png"
-                        alt="Постельное бельё"
-                      />
-                      <div class="slider-buttons">
-                        <button class="slider-button active"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
-                        <button class="slider-button"></button>
+                      <div class="slider__img-wrapper">
+                        <img
+                          src="./img/catalog/image12.png"
+                          alt="Постельное бельё"
+                        />
+                      </div>
+                      <div class="slider__items">
+                        <div class="slider__item si1"></div>
+                        <div class="slider__item si2"></div>
+                        <div class="slider__item si3"></div>
+                        <div class="slider__item si4"></div>
+                        <div class="slider-buttons">
+                          <span class="slider-button sb1"></span>
+                          <span class="slider-button sb2"></span>
+                          <span class="slider-button sb3"></span>
+                          <span class="slider-button sb4"></span>
+                        </div>
                       </div>
                     </div>
                     <div class="catalog__item-description">
                       <a href="#" class="catalog__item-title">КПБ «Мальва»</a>
-                      <span>Рис. 5676</span>
+                      <span>Рис.&nbsp;5676</span>
                     </div>
                     <div class="catalog__like-container">
                       <button
+                        type="button"
                         class="catalog__btn-like"
                         aria-label="Кнопка лайка"
                       ></button>
@@ -828,20 +942,22 @@
 
             <div class="pagination">
               <div class="pagination__items">
-                <button class="pagination__btn">&larr;&nbsp;Назад</button>
+                <a class="pagination__btn-step">&larr;&nbsp;Назад</a>
                 <div class="pagination__pages">
-                  <button class="pagination__btn">1</button>
-                  <button class="pagination__btn">2</button>
-                  <button class="pagination__btn active">3</button>
-                  <button class="pagination__btn">4</button>
-                  <button class="pagination__btn">...</button>
-                  <button class="pagination__btn">99</button>
-                  <button class="pagination__btn">100</button>
-                  <button class="pagination__btn">101</button>
+                  <a class="pagination__btn">1</a>
+                  <a class="pagination__btn">2</a>
+                  <a class="pagination__btn active">3</a>
+                  <a class="pagination__btn">4</a>
+                  <a class="pagination__btn">...</a>
+                  <a class="pagination__btn">99</a>
+                  <a class="pagination__btn">100</a>
+                  <a class="pagination__btn">101</a>
                 </div>
-                <button class="pagination__btn">Вперёд&nbsp;&rarr;</button>
+                <a class="pagination__btn-step"
+                  >Вперёд&nbsp;&rarr;</a
+                >
               </div>
-              <button class="pagination__btn pagination__btn_type_more">
+              <button type="button" class="pagination__btn-more">
                 Показать ещё
               </button>
             </div>
@@ -951,14 +1067,14 @@
 
             <div class="footer__contacts">
               <h2 class="footer__title">Контакты</h2>
-              <ul class="footer__list footer__list_type_contacts">
+              <ul class="footer__list">
                 <li>
                   <span>Иваново</span>
-                  <p>+7 (4932) 11-11-11</p>
+                  <a href="#" class="footer__link">+7 (4932) 11-11-11</a>
                 </li>
                 <li>
                   <span>Москва</span>
-                  <p>+7 (495) 111-11-11</p>
+                  <a href="#" class="footer__link">+7 (495) 111-11-11</a>
                 </li>
               </ul>
             </div>
@@ -969,11 +1085,11 @@
           <ul class="footer__list show footer__list_type_mobile">
             <li>
               <span>Иваново</span>
-              <p>+7 (4932) 11-11-11</p>
+              <a href="#" class="footer__link">+7 (4932) 11-11-11</a>
             </li>
             <li>
               <span>Москва</span>
-              <p>+7 (495) 111-11-11</p>
+              <a href="#" class="footer__link">+7 (495) 111-11-11</a>
             </li>
           </ul>
         </section>

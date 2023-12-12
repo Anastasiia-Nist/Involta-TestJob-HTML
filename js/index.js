@@ -7,9 +7,6 @@ const buttonsLikes = document.querySelectorAll('.catalog__btn-like');
 const buttonsFilter = document.querySelectorAll('.catalog__filter-btn');
 const buttonSidebar = document.querySelector('.sidebar-button');
 const buttonsPagination = document.querySelectorAll('.pagination__btn');
-const buttonsPaginationTypeMore = document.querySelector(
-  '.pagination__btn_type_more'
-);
 const burger = document.querySelector('.header__button-burger');
 // footer
 const footerTitles = document.querySelectorAll('.footer__title');
@@ -29,7 +26,6 @@ function initPage() {
     blockedScroll();
   }
   function closeModal(modal) {
-    if (modal === sidebar) buttonSidebar.classList.remove(`active`);
     modal.classList.remove('show');
     unBlockedScroll();
   }
@@ -68,15 +64,16 @@ function initPage() {
   // sidebar button
   buttonSidebar.addEventListener('click', () => {
     openModal(sidebar);
-    buttonSidebar.classList.add(`active`);
   });
   // all sliders
   sliders.forEach((slider) => {
-    const buttons = slider.querySelectorAll('button');
+    const sliderItems = slider.querySelectorAll('.slider__item');
+    const buttons = slider.querySelectorAll('.slider-button');
     const img = slider.querySelector('img');
     const src = img.src;
-    buttons.forEach((btn, index) => {
-      btn.addEventListener('mouseover', () => {
+    sliderItems.forEach((item, index) => {
+      item.addEventListener('mouseover', () => {
+        const btn = slider.querySelector(`.sb${index + 1}`);
         clearBgButtons(buttons);
         btn.classList.toggle(`active`);
         if (index === 0) {
@@ -106,12 +103,8 @@ function initPage() {
   // all buttons pagination
   buttonsPagination.forEach((button) => {
     button.addEventListener('click', () => {
-      if (button === buttonsPaginationTypeMore) {
-        return;
-      } else {
-        clearBgButtons(buttonsPagination);
-        button.classList.toggle(`active`);
-      }
+      clearBgButtons(buttonsPagination);
+      button.classList.toggle(`active`);
     });
   });
   // all footer info-title

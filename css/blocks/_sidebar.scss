@@ -1,0 +1,87 @@
+// sidebar
+.sidebar {
+  @include breakpoint(md) {
+    display: none;
+    opacity: 0;
+  }
+  &-container {
+    @include column;
+    gap: 23px;
+  }
+
+  &__items {
+    @include column;
+    gap: 35px;
+  }
+  &__item {
+    @include column;
+    gap: 16px;
+    .sidebar__title {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+  &__list {
+    @include column;
+    gap: 12px;
+    &-item {
+      font-size: 14px;
+      span {
+        padding-left: 3px;
+        color: var(--color-gray);
+      }
+    }
+  }
+}
+.sidebar.show {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 500;
+  animation: modal normal 0.4s ease;
+  @include breakpoint-min(md) {
+    display: none;
+  }
+  .sidebar-container {
+    padding: 20px 0 20px 20px;
+    background-color: var(--color-light);
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+    @include breakpoint(sm) {
+      width: 66%;
+    }
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.sidebar-button {
+  display: none;
+  @include breakpoint(md) {
+    display: block;
+    align-self: flex-end;
+    margin: 20px 0;
+    font-size: 12px;
+    padding: 7px 16px;
+    @include button;
+    border-radius: 3px;
+  }
+  @include breakpoint(sm) {
+    align-self: center;
+    width: 100%;
+  }
+  &:hover {
+    color: var(--color-light);
+    background-color: var(--color-text);
+  }
+}

@@ -1,4 +1,3 @@
-// объявление переменных
 :root {
   --color-text: #2b2b2b;
   --color-light: #ffffff;
@@ -35,6 +34,7 @@ body.page-lock {
   overflow: hidden;
 }
 a {
+  cursor: pointer;
   color: var(--color-text);
   text-decoration: none;
   outline: none;
@@ -61,9 +61,10 @@ h1 {
 
 h2 {
   font-size: 24px;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   line-height: normal;
+  letter-spacing: -0.72px;
   @include breakpoint(lg) {
     font-size: 18px;
   }
@@ -129,7 +130,7 @@ h3 {
       }
     }
   }
-  &__title {
+  &__link {
     font-size: 20px;
     letter-spacing: -0.6px;
     @include font-normal;
@@ -138,12 +139,10 @@ h3 {
     }
   }
   &__additional {
-    cursor: pointer;
-    @include breakpoint(lg) {
-      max-width: 100px;
-    }
-    @include breakpoint(md) {
-      max-width: 200px;
+    display: flex;
+    gap: 40px;
+    a:hover img {
+      transform: scale(1.2);
     }
   }
 
@@ -225,99 +224,6 @@ h3 {
   }
 }
 
-// sidebar
-.sidebar {
-  @include breakpoint(md) {
-    display: none;
-    opacity: 0;
-  }
-  &-container {
-    @include column;
-    gap: 23px;
-  }
-
-  &__items {
-    @include column;
-    gap: 35px;
-  }
-  &__item {
-    @include column;
-    gap: 16px;
-    .sidebar__title {
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-  }
-  &__list {
-    @include column;
-    gap: 12px;
-    &-item {
-      font-size: 14px;
-      span {
-        padding-left: 3px;
-        color: var(--color-gray);
-      }
-    }
-  }
-}
-.sidebar.show {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  opacity: 1;
-  top: 0;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 500;
-  animation: modal normal 0.4s ease;
-  @include breakpoint-min(md) {
-    display: none;
-  }
-  .sidebar-container {
-    padding: 20px 0 20px 20px;
-    background-color: var(--color-light);
-    width: 50%;
-    height: 100%;
-    overflow-y: scroll;
-    @include breakpoint(sm) {
-      width: 50%;
-    }
-  }
-  h3 {
-    font-size: 20px;
-  }
-}
-
-.sidebar-button {
-  display: none;
-  @include breakpoint(md) {
-    display: block;
-    align-self: flex-end;
-    margin: 20px 0;
-    font-size: 12px;
-    padding: 7px 16px;
-    background-color: var(--color-light);
-    border: 1px solid var(--color-text);
-    border-radius: 3px;
-  }
-  @include breakpoint(sm) {
-    align-self: center;
-    width: 100%;
-  }
-  &.active {
-    color: var(--color-light);
-    background-color: var(--color-text);
-  }
-  &:hover {
-    color: var(--color-light);
-    background-color: var(--color-text);
-  }
-}
-
 // MAIN
 
 .container__main {
@@ -334,14 +240,14 @@ h3 {
       display: flex;
       justify-content: center;
       font-size: 12px;
+      a {
+        border-bottom: 1px solid var(--color-link);
+      }
       a:last-child:hover {
         color: var(--color-text);
       }
-      a:last-child p {
+      a:last-child {
         border-bottom: none;
-      }
-      p {
-        border-bottom: 1px solid var(--color-link);
       }
       span {
         color: var(--color-gray);
@@ -385,22 +291,26 @@ h3 {
       &-btn {
         font-size: 12px;
         padding: 7px 16px;
-        background-color: var(--color-light);
-        border: 1px solid var(--color-text);
+        @include button;
         border-radius: 3px;
       }
       &-btn.active {
-        color: var(--color-light);
-        background-color: var(--color-text);
+        @include button-active;
       }
       &-span {
         font-size: 12px;
       }
     }
+    &__products {
+      li {
+        display: flex;
+      }
+    }
     &__item {
       @include column;
       position: relative;
-      margin-bottom: 36px;
+      width: 100%;
+      margin-bottom: 38px;
       span {
         font-size: 14px;
         color: #707070;
@@ -411,20 +321,32 @@ h3 {
       }
     }
     &__like-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      background-color: rgba(243, 239, 239, 0.7);
+      z-index: 5;
       .catalog__btn-like {
-        width: 31px;
-        height: 31px;
+        width: 100%;
+        height: 100%;
         border: none;
-        position: absolute;
-        top: 22px;
-        right: 22px;
         background-color: transparent;
         background-image: url('../../img/like.svg');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-position: center;
+        background-size: 50%;
       }
       .catalog__btn-like.active {
-        background-image: url('../../img/dislike.svg');
+        background-image: url('../../img/likeActive.svg');
+      }
+      &:hover {
+        cursor: pointer;
       }
     }
   }
@@ -438,6 +360,7 @@ h3 {
     &__items,
     &__pages {
       display: flex;
+      align-items: center;
       gap: 10px;
     }
     &__pages {
@@ -453,25 +376,25 @@ h3 {
         display: none;
       }
     }
-    &__btn {
+    &__btn,
+    &__btn-step,
+    &__btn-more {
       padding: 10px 20px;
-      border: 1px solid #2b2b2b;
-      background-color: transparent;
+      @include button;
       @include breakpoint(md) {
-        padding: 6px 12px;
+        padding: 10px 12px;
       }
       @include breakpoint(sm) {
         width: 100%;
         padding: 6px;
       }
-      &_type_more:hover {
-        background-color: var(--color-text);
-        color: var(--color-light);
+      &-step:hover,
+      &-more:hover {
+        @include button-active;
       }
     }
     &__btn.active {
-      background-color: var(--color-text);
-      color: var(--color-light);
+      @include button-active;
     }
   }
   .info {
@@ -480,7 +403,6 @@ h3 {
       padding-top: 40px;
     }
     &__title {
-      letter-spacing: -0.72px;
       padding-bottom: 11px;
     }
     &__item p {
@@ -510,7 +432,7 @@ h3 {
     @include space-between;
     align-items: start;
     padding-top: 35px;
-    padding-bottom: 59px;
+    padding-bottom: 56px;
     border-bottom: 1px dashed var(--color-text);
     @include breakpoint(xl) {
       padding-bottom: 35px;
@@ -523,6 +445,11 @@ h3 {
       gap: 30px;
     }
   }
+  &__title:hover {
+    @include breakpoint(md) {
+      transform: scale(1.1);
+    }
+  }
   &__about-menu {
     @include space-between;
     width: 83%;
@@ -530,12 +457,13 @@ h3 {
     .footer__about-item {
       @include column;
       @include breakpoint(md) {
+        width: 100%;
         align-items: center;
         text-align: center;
       }
     }
     @include breakpoint(md) {
-      justify-content: space-around;
+      justify-content: space-between;
     }
     @include breakpoint(xs) {
       flex-direction: column;
@@ -554,6 +482,11 @@ h3 {
       font-size: 18px;
       padding-bottom: 16px;
     }
+    li {
+      @include column;
+      align-items: center;
+      gap: 8px;
+    }
   }
   &__title {
     font-size: 20px;
@@ -570,9 +503,8 @@ h3 {
   }
   &__list {
     @include column;
-    gap: 8px;
     flex-wrap: wrap;
-    max-height: 130px;
+    max-height: 134px;
     @include breakpoint(xl) {
       max-height: 110px;
     }
@@ -583,11 +515,10 @@ h3 {
     @include breakpoint(md) {
       display: none;
     }
-    &_type_contacts {
-      gap: 24px;
-    }
     li {
+      @include column;
       padding-right: 20px;
+      padding-bottom: 8px;
       @include breakpoint(xl) {
         font-size: 12px;
         padding-right: 14px;
@@ -600,7 +531,7 @@ h3 {
       font-size: 13px;
       line-height: normal;
     }
-    p {
+    .footer__link {
       font-size: 24px;
       font-weight: 500;
       @include breakpoint(xl) {
@@ -626,9 +557,11 @@ h3 {
       text-align: center;
     }
     &-icons {
-      cursor: pointer;
       display: flex;
       gap: 26px;
+      a:hover img {
+        transform: scale(1.2);
+      }
     }
   }
   &__description {
@@ -638,6 +571,9 @@ h3 {
     max-width: 195px;
   }
   &__contacts {
+    li {
+      gap: 8px;
+    }
     @include breakpoint(md) {
       display: none;
     }
